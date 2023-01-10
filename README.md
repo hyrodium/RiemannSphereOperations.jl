@@ -18,7 +18,7 @@ julia> complex(Inf,-Inf) ==′ complex(1,0)
 false
 ```
 
-The Base functions without `′` (`\prime<tab>`) computes complex number incorrectly on the Riemann sphere.
+The outputs of the Base functions without `′` (`\prime<tab>`) is not compatible on the Riemann sphere.
 
 ```julia
 julia> inv(complex(0,0))
