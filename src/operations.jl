@@ -1,3 +1,12 @@
+## TODO: add +′, *′ etc.
+
+function ==′(z1, z2)
+    (isfinite(z1) & isfinite(z2)) && return (z1 == z2)
+    (isnan(z1) | isnan(z2)) && return false
+    (isinf(z1) & isinf(z2)) && return true
+    return false
+end
+
 ## inv′
 function inv′(z::Complex)
     c, d = reim(z)
