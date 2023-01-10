@@ -1,5 +1,7 @@
 module RiemannSphereOperations
 
-# Write your package code here.
+export inv′, /′
+
+include("operations.jl")
 
 end
