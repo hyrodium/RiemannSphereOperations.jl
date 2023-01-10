@@ -1,0 +1,13 @@
+name = "RiemannSphereOperations"
+uuid = "d30d4edc-727b-436c-a722-bc9a766de410"
+authors = ["hyrodium <hyrodium@gmail.com> and contributors"]
+version = "0.1.0"
+
+[compat]
+julia = "1"
+
+[extras]
+Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
+
+[targets]
+test = ["Test"]
