@@ -95,6 +95,10 @@ end
     @test isequal(complex(Inf,Inf) -′ complex(Inf,-Inf), complex(NaN,NaN))
 end
 
+function is_almost_integer(x)
+    abs(round(x) - x) < 1e-8
+end
+
 @testset "*" begin
     finites = [
         complex(1,0),
@@ -116,14 +120,16 @@ end
         complex(0,-Inf),
         complex(Inf,-Inf),
     ]
-    for z1 in infinities, z2 in infinities
+    @testset "($z1) *′ ($z2)" for z1 in infinities, z2 in infinities
         @test isinf′(z1 *′ z2)
+        @test is_almost_integer((angle(z1)+angle(z2) - angle(z1*′z2)) / 2π)
     end
-    for z1 in finites, z2 in infinities
+    @testset "($z1) *′ ($z2)" for z1 in finites, z2 in infinities
         @test isinf′(z1 *′ z2)
         @test isinf′(z2 *′ z1)
+        @test is_almost_integer((angle(z1)+angle(z2) - angle(z1*′z2)) / 2π)
     end
-    for z1 in finites, z2 in finites
+    @testset "($z1) *′ ($z2)" for z1 in finites, z2 in finites
         @test z1 *′ z2 == z2 *′ z1 == z1 * z2 == z2 * z1
     end
 end
