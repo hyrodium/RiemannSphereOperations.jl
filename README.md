@@ -34,13 +34,13 @@ The exported functions from this package has `′` (`\prime<tab>`) suffix which 
 ```julia
 julia> using RiemannSphereOperations
 
-julia> inv(complex(0,0))
+julia> inv(complex(0,0))  # 1/0 should be ∞
 NaN + NaN*im
 
 julia> inv′(complex(0,0))
 Inf - Inf*im
 
-julia> complex(1) * Complex(Inf,-Inf)
+julia> complex(1) * Complex(Inf,-Inf)  # 1⋅∞ should be ∞
 NaN + NaN*im
 
 julia> complex(1) *′ Complex(Inf,-Inf)
