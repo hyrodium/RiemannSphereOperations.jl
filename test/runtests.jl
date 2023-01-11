@@ -1,5 +1,8 @@
 using RiemannSphereOperations
 using Test
+using Aqua
+
+Aqua.test_all(RiemannSphereOperations)
 
 @testset "isinf" begin
     @test !isinf(42)
