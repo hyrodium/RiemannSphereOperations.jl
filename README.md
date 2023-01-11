@@ -1,5 +1,11 @@
 # RiemannSphereOperations
 
+[![Stable](https://img.shields.io/badge/docs-stable-blue.svg)](https://hyrodium.github.io/RiemannSphereOperations.jl/stable)
+[![Dev](https://img.shields.io/badge/docs-dev-blue.svg)](https://hyrodium.github.io/RiemannSphereOperations.jl/dev)
+[![Build Status](https://github.com/hyrodium/RiemannSphereOperations.jl/workflows/CI/badge.svg)](https://github.com/hyrodium/RiemannSphereOperations.jl/actions?query=workflow%3ACI+branch%3Amain)
+[![codecov](https://codecov.io/gh/hyrodium/RiemannSphereOperations.jl/branch/main/graph/badge.svg?token=dJBiR91dCD)](https://codecov.io/gh/hyrodium/RiemannSphereOperations.jl)
+[![Aqua QA](https://raw.githubusercontent.com/JuliaTesting/Aqua.jl/master/badge.svg)](https://github.com/JuliaTesting/Aqua.jl)
+
 This package provides some operations on the Riemann sphere.
 
 ```julia
