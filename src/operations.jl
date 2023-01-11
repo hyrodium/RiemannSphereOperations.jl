@@ -63,7 +63,7 @@ function *′(z1::Complex{T}, x2::T) where {T<:Real}
     y = (y1 * x2) * !iszero(y1)
     return complex(x,y)
 end
-function *′(x1::Complex{T}, z2::T) where {T<:Real}
+function *′(x1::T, z2::Complex{T}) where {T<:Real}
     x2, y2 = reim(z2)
     x = (x1 * x2) * !iszero(x2)
     y = (x1 * y2) * !iszero(y2)
