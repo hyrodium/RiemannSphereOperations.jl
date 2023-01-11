@@ -6,13 +6,13 @@
 [![codecov](https://codecov.io/gh/hyrodium/RiemannSphereOperations.jl/branch/main/graph/badge.svg?token=dJBiR91dCD)](https://codecov.io/gh/hyrodium/RiemannSphereOperations.jl)
 [![Aqua QA](https://raw.githubusercontent.com/JuliaTesting/Aqua.jl/master/badge.svg)](https://github.com/JuliaTesting/Aqua.jl)
 
-This package provides some operations on the Riemann sphere $\hat{\mathbb{C}} = \mathbb{C} \cup \{\infty\}$.
+This package provides some operations on the Riemann sphere $\hat{\mathbb{C}} = \mathbb{C} \cup \\{\infty\\}$.
 
 The following are the calculation rules with the point at infinity $\infty$.
 
-* $a+\infty = \infty \quad (a\in\mathbb{C})$
-* $a\infty = \infty \quad (a\in\mathbb{C}\setminus\{0\})$
-* $\infty\cdot\infty = \infty \quad (a\in\mathbb{C}\setminus\{0\})$
+* $a + \infty = \infty \quad (a\in\mathbb{C})$
+* $a \cdot \infty = \infty \quad (a\in\mathbb{C}\setminus\\{0\\})$
+* $\infty \cdot \infty = \infty \quad (a\in\mathbb{C}\setminus\\{0\\})$
 * $1/0 = \infty$
 * $1/\infty = 0$
 
@@ -23,6 +23,8 @@ Note that the following cannot be defined.
 * $\infty / \infty$
 * $\infty + \infty$
 * $\infty - \infty$
+
+In this package, 
 
 ```julia
 julia> using RiemannSphereOperations
