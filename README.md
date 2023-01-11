@@ -29,7 +29,7 @@ Note that the following cannot be defined.
 In this package, a value `z` which satisfies `isinf(z)` and `!isnan(z)` is used to represent the infinity $\\{\infty\\}$.
 Thus, all of `complex(Inf,2.0), complex(Inf,-Inf), complex(1//0,1//1)` are treated as the same point $\infty$ in this package.
 
-The exported functions from this package has `′` (`\prime<tab>`) suffix which represents a modified version of the function on the Riemann sphere.
+All of the exported functions from this package has `′` (`\prime<tab>`) suffix which represents a modified version of the function on the Riemann sphere.
 
 ```julia
 julia> using RiemannSphereOperations
