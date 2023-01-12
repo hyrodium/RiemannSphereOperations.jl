@@ -45,7 +45,13 @@ NaN + NaN*im
 
 julia> complex(1) *′ Complex(Inf,-Inf)
 Inf - Inf*im
+
+julia> Inf + Inf  # ∞+∞ cannot be defined
+Inf
+
+julia> Inf +′ Inf
+NaN
 ```
 
 This package has more functions such as `isinfty′`, `+′`, `/′` etc.
-See [the documentation page](https://github.com/hyrodium/RiemannSphereOperations.jl) for more information.
+See [the documentation page](https://hyrodium.github.io/RiemannSphereOperations.jl/dev/) for more information.
