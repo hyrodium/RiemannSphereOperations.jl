@@ -57,9 +57,6 @@ function isinf′(x::Real)
 end
 
 nan(x::Number) = zero(x)/zero(x)
-inf(::Type{Complex{T}}) where {T} = Complex{T}(inf(T),inf(T))
-inf(T::Type{<:Real}) = one(T)/zero(T)
-inf(::T) where T = inf(T)
 
 # +′
 function +′(x::Number)
