@@ -1,5 +1,26 @@
-## TODO: add +′, *′ etc.
+"""
+    ==′(z1::Number, z2::Number)
 
+Modified version of `==` for Riemann sphere.
+
+# Examples
+```jldoctest
+julia> 1 == 1.0, 1 ==′ 1.0
+(true, true)
+
+julia> 0.0 == -0.0, 0.0 ==′ -0.0
+(true, true)
+
+julia> Inf == -Inf, Inf ==′ -Inf
+(false, true)
+
+julia> NaN == NaN, NaN ==′ NaN
+(false, false)
+
+julia> complex(Inf,1) ==′ complex(-Inf,8) ==′ complex(1,Inf) ==′ complex(-Inf,-Inf)
+true
+```
+"""
 function ==′(z1, z2)
     (isnan(z1) | isnan(z2)) && return false
     (isinf(z1) & isinf(z2)) && return true
@@ -8,6 +29,26 @@ end
 
 !=′(x, y) = !(x ==′ y)
 
+"""
+    isinf′(z::Number)
+
+Modified version of `isinf` for Riemann sphere.
+
+# Examples
+```jldoctest
+julia> isinf′(42)
+false
+
+julia> isinf′(Inf)
+true
+
+julia> isinf′(complex(Inf,4))
+true
+
+julia> isinf′(complex(Inf,NaN))
+false
+```
+"""
 function isinf′(z::Complex)
     return isinf(z) & !isnan(z)
 end
