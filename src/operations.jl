@@ -62,6 +62,9 @@ inf(T::Type{<:Real}) = one(T)/zero(T)
 inf(::T) where T = inf(T)
 
 # +′
+function +′(x::Number)
+    return +(x)
+end
 function +′(x1::Real, z2::Complex)
     x2, y2 = reim(z2)
     x = x1 +′ x2
@@ -79,6 +82,9 @@ function +′(z1::Number, z2::Number)
 end
 
 # -′
+function -′(x::Number)
+    return -(x)
+end
 function -′(x1::Real, z2::Complex)
     x2, y2 = reim(z2)
     x = x1 -′ x2
