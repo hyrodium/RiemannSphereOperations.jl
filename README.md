@@ -13,7 +13,7 @@ The following are the calculation rules with the point at infinity $\infty$.
 
 * $a + \infty = \infty \quad (a\in\mathbb{C})$
 * $a \cdot \infty = \infty \quad (a\in\mathbb{C}\setminus\\{0\\})$
-* $\infty \cdot \infty = \infty \quad (a\in\mathbb{C}\setminus\\{0\\})$
+* $\infty \cdot \infty = \infty$
 * $1/0 = \infty$
 * $1/\infty = 0$
 
